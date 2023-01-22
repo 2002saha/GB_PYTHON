@@ -66,6 +66,7 @@ def clear_files(input_file, output_file):
         in_file.write("")
     with open(output_file, "w") as out_file:
         out_file.write("")
+    print("status: input.txt и output.txt успешно очищены.")
 
 def main():
     delay = 2
