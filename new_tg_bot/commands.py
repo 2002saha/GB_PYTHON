@@ -18,6 +18,7 @@ async def start_bot(message: types.Message):
         writer = csv.writer(file)
         writer.writerow([user_id, user_login, user_time])
     print(message)
+    print(message.from_user.id)
     await message.reply(f'✌️Привет, {message.from_user.first_name}!✌️')
     print('Start')
     await message.answer(f"💡Я знаю такие команды:💡\n\n/help и /start - справка по командам🤔\n\n/candy - игра в конфетки🍬\n\n/info - информация об проекте")
