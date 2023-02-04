@@ -14,7 +14,7 @@ async def start_bot(message: types.Message):
     user_id = message.from_user.id
     user_login = message.from_user.username
     user_time = message.date.strftime("%Y-%m-%d %H:%M:%S")
-    with open("new_tg_bot\log.csv", "a", newline='') as file:
+    with open("new_tg_bot\logs\log.csv", "a", newline='') as file:
         writer = csv.writer(file)
         writer.writerow([user_id, user_login, user_time])
     print(message)
